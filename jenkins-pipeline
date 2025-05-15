@@ -1,0 +1,20 @@
+pipeline {
+    agent any {
+        stages {
+            stage {
+                steps ("Build Docker image") {
+                    sh echo "Rodando comando de montar image no Docker"    
+            }
+            stage {
+                steps ("Push docker image") {
+                    sh echo "Rodando comando de push image no Docker"
+                }
+            }
+            stage {
+                steps ("Deploying docker") {
+                    sh echo "Rodando comando de Deploy"
+                }       
+            }
+        }
+    }
+}
