@@ -1,6 +1,9 @@
-FROM remote-host
+FROM remote_host
 
-RUN yum -y install nginx php-fpm php-mysqlnd
+RUN yum -y install epel-release && \
+    yum -y install nginx php-fpm php-mysqlnd && \
+    yum clean all && \
+    rm -rf /var/cache/yum
 
 EXPOSE 80 443
 
