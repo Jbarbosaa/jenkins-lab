@@ -16,6 +16,6 @@ while [ $counter -lt 20 ]; do
         sleep 1
         echo "Counter: $counter"
 
-        mysql -u root -p1234 people -e "insert into register values ($counter, '$name', '$lastname', $age);"
+        mysql -h sql_rost -u root -p1234 people -e "insert into register values ($counter, '$name', '$lastname', $age);"
         echo "Inserted: $counter, $name, $lastname, $age was correctly inserted into the database"
 done

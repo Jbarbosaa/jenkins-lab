@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins-ansible
+    build:
+      context: /home/jenkins/jenkins-data/ansible
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+    networks:
+      - net
+
+  remote_host:
+    container_name: remote_host
+    image: remote_host
+    build:
+      context: ./fedora
+    networks:
+      - net
+    volumes:
+      - ./aws-s3.sh:/tmp/script.sh
+
+  sql_host:
+    container_name: sql_host
+    image: mysql
+    env_file:
+      - .env
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - net
+
+networks:
+  net:
+
+volumes:
+  db_data:
