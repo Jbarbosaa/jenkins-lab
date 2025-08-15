@@ -4,11 +4,14 @@
 echo "antes do cd"
 pwd
 
-cd /home/jenkins/jenkins-data/pipeline/java-app/target/
+cd /app/target/
+
 echo "dps do cd"
 pwd
 
-cp -f *.jar ./app.jar
+cp -f *.jar ./var/jenkins_home/workspace/pipeline-maven/pipeline/jenkins/build/app.jar
+
+
 
 echo "*********************************"
 echo "**** Building Docker Images *****"
