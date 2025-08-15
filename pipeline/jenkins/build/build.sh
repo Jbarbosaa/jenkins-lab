@@ -8,4 +8,4 @@ echo "*********************************"
 echo "**** Building Docker Images *****"
 echo "*********************************"
 
-cd jenkins/build && docker compose -f docker-compose-build build --no-cache
+docker compose -f docker-compose-build build --no-cache
