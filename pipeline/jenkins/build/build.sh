@@ -4,7 +4,7 @@
 set -Eeuo pipefail
 
 ROOT="${WORKSPACE:-$PWD}"
-
+pwd
 cp -f /target/*.jar ./app.jar
 
 echo "*********************************"
