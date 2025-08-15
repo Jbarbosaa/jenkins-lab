@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Copy the new jar to the build location
+cd $WORKSPACE
 
 cp -f target/*.jar ./app.jar
 
