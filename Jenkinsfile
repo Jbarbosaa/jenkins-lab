@@ -7,13 +7,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './pipeline/jenkins/build/mvn.sh -B -DskipTests clean package'
-                sh './pipeline/jenkins/build/build.sh'
+                sh 'bash pipeline/jenkins/build/mvn.sh -B -DskipTests clean package'
+                sh 'bash jenkins/build/build.sh'
             }
         }
         stage('Test') {
             steps {
-                sh './pipeline/jenkins/build/mvn-test.sh mvn test'
+                sh 'bash pipeline/jenkins/build/mvn-test.sh mvn test'
             }
             post {
                 always {
@@ -23,12 +23,12 @@ pipeline {
         }
         stage ('Push') {
             steps {
-                sh './pipeline/jenkins/push/push.sh'
+                sh 'bash pipeline/jenkins/push/push.sh'
             }
         }
         stage('Deploy') { 
             steps {
-                sh './pipeline/jenkins/deploy/deploy.sh' 
+                sh 'bash pipeline/jenkins/deploy/deploy.sh' 
             }
         }
     }
