@@ -1,8 +1,11 @@
 #!/bin/bash
 
 # Copy the new jar to the build location
+set -Eeuo pipefail
 
-cp -f /home/jenkins/jenkins-data/pipeline/java-app/target/*.jar ./app.jar
+ROOT="${WORKSPACE:-$PWD}"
+
+cp -f /target/*.jar ./app.jar
 
 echo "*********************************"
 echo "**** Building Docker Images *****"
