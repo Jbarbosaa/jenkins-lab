@@ -2,12 +2,12 @@
 
 # Copy the new jar to the build location
 echo "antes do cd"
-pwd
+pwd && ls -ltr
 
 cd /app/target/
 
 echo "dps do cd"
-pwd
+pwd && ls -ltr
 
 cp -f *.jar ./var/jenkins_home/workspace/pipeline-maven/pipeline/jenkins/build/app.jar
 
