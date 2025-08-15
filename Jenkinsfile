@@ -2,12 +2,12 @@ pipeline {
     agent any
     options {
         skipStagesAfterUnstable()
-        timestamps()
+        timestamps ()
     }
     stages {
         stage('Build') {
             steps {
-                sh './pipeline/jenkins/build mvn -B -DskipTests clean package'
+                sh './pipeline/jenkins/mvn.sh -B -DskipTests clean package'
                 sh './jenkins/build/build.sh'
             }
         }
