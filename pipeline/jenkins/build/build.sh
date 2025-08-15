@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # Copy the new jar to the build location
-set -Eeuo pipefail
 
-ROOT="${WORKSPACE:-$PWD}"
 pwd
 cp -f /target/*.jar ./app.jar
 
