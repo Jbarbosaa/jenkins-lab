@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'bash pipeline/jenkins/build/mvn.sh -B -DskipTests clean package'
-                sh 'bash jenkins/build/build.sh'
+                sh 'bash pipeline/jenkins/build/build.sh'
             }
         }
         stage('Test') {
