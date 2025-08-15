@@ -3,14 +3,15 @@ version: '3.8'
 services:
   jenkins:
     container_name: jenkins
-    image: jenkins-ansible
+    image: jenkins/docker
     build:
-      context: ./ansible
+      context: ./pipeline
     ports:
       - "8080:8080"
       - "50000:50000"
     volumes:
       - ./jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - net
 
@@ -42,7 +43,7 @@ services:
     ports:
       - "80:80"
     networks:
-      - net 
+      - net
 
 networks:
   net:
