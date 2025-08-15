@@ -2,7 +2,7 @@
 
 # Copy the new jar to the build location
 
-cp -f java-app/target/*jar jenkins/build
+cp -f /app/target/my-app-1.0-SNAPSHOT.jar pipeline/jenkins/build/
 
 echo "*********************************"
 echo "**** Building Docker Images *****"
