@@ -2,6 +2,7 @@ pipeline {
     agent any
     options {
         skipStagesAfterUnstable()
+        timestamps()
     }
     stages {
         stage('Build') {
@@ -20,10 +21,11 @@ pipeline {
                 }
             }
         }
-        stage ('Push')
+        stage ('Push') {
             steps {
                 sh './pipeline/jenkins/push/push.sh'
             }
+        }
         stage('Deploy') { 
             steps {
                 sh './pipeline/jenkins/deploy/deploy.sh' 
