@@ -11,7 +11,7 @@ sed -i '3s/^/pass=/' /tmp/.env
 KEYDIRECTORY=/var/jenkins_home/.ssh/prod
 
 scp -i $KEYDIRECTORY /tmp/.env prod-user@54.207.139.47:/tmp/.env
-scp -i $KEYDIRECTORY /var/jenkins_home/pipeline/jenkins/deploy/docker-compose.yml prod-user@54.207.139.47:/tmp/docker-compose.yml
+scp -i $KEYDIRECTORY pipeline/jenkins/deploy/docker-compose.yml prod-user@54.207.139.47:/tmp/docker-compose.yml
 
 #ssh -i $KEYDIRECTORY prod-user@54.207.139.47 './tmp/publish.sh'
 
