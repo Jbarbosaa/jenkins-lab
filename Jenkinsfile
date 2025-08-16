@@ -22,6 +22,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'bash pipeline/jenkins/build/mvn-test.sh mvn test'
+                sh 'cp -f /var/java-app/target/surefire-reports/*xml pipeline/java-app/target/surefire-reports/ || true'
             }
             post {
                 always {
