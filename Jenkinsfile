@@ -13,7 +13,6 @@ pipeline {
                 sh 'bash pipeline/jenkins/build/mvn.sh -B -DskipTests clean package'
                 sh 'bash pipeline/jenkins/build/build.sh'
             }
-        }
             post {
                 success {
                     archiveArtifacts artifacts: 'java-app/target/*.jar', fingerprint: true
@@ -41,3 +40,4 @@ pipeline {
             }
         }
     }
+}
