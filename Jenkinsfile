@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        pass = credentials ('key-dockerhub')
+    }
     options {
         skipStagesAfterUnstable()
         timestamps ()
