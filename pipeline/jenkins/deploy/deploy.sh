@@ -8,7 +8,7 @@ sed -i '1s/^/IMAGE=/' /tmp/.env
 sed -i '2s/^/TAG=/' /tmp/.env
 sed -i '3s/^/pass=/' /tmp/.env
 
-KEYDIRECTORY=/var/jenkins_home/.ssh
+KEYDIRECTORY=/var/jenkins_home/.ssh/prod
 
 scp -i $KEYDIRECTORY /tmp/.env prod-user@54.207.139.47:/tmp/.env
 scp -i $KEYDIRECTORY /home/jenkins/jenkins-data/pipeline/jenkins/deploy/docker-compose.yml prod-user@54.207.139.47:/tmp/docker-compose.yml
