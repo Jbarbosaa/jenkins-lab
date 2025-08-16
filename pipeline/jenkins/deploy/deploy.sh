@@ -15,4 +15,4 @@ scp -i $KEYDIRECTORY pipeline/jenkins/deploy/docker-compose.yml prod-user@54.207
 
 #ssh -i $KEYDIRECTORY prod-user@54.207.139.47 './tmp/publish.sh'
 
-ssh -i $KEYDIRECTORY prod-user@54.207.139.47 'cd /tmp && docker-compose up -d'
+ssh -i $KEYDIRECTORY prod-user@54.207.139.47 'cd /tmp && docker compose up -d'
