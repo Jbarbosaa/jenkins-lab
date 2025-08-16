@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo maven-project > /tmp/.env
-echo $BUILD_TAG > /tmp/.env
-echo $pass > /tmp/.env
+echo $BUILD_TAG >> /tmp/.env
+echo $pass >> /tmp/.env
 
 sed -i '1s/^/IMAGE=/' /tmp/.env
 sed -i '2s/^/TAG=/' /tmp/.env
