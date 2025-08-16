@@ -8,4 +8,5 @@ echo "*********************************"
 echo "**** Building Docker Images *****"
 echo "*********************************"
 
+locate docker-compose-build
 docker compose -f /var/jenkins_home/pipeline/jenkins/build/docker-compose-build build --no-cache
