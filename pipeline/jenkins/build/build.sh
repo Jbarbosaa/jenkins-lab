@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Copy the new jar to the build location
-
+ls /var/java-app/target/*.jar
 cp -f /var/java-app/target/*.jar ./pipeline/jenkins/build/app.jar
 
 echo "*********************************"
