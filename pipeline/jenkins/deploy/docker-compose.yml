@@ -1,0 +1,4 @@
+services:
+  maven:
+    image: "jbarbosaa/$IMAGE:$TAG"
+    container_name: maven-app
