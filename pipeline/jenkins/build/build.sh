@@ -9,4 +9,4 @@ echo "**** Building Docker Images *****"
 echo "*********************************"
 
 ls -R pipeline/
-docker compose -f /var/jenkins_home/pipeline/jenkins/build/docker-compose-build build --no-cache
+docker compose -f pipeline/jenkins/build/docker-compose-build.yaml build --no-cache
