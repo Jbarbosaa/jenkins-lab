@@ -1,4 +1,9 @@
 #!bin/bash
+echo "**************************"
+echo "*** Clonning java-app *********"
+echo "**************************"
+
+mkdir /home/jenkins/jenkins-data/pipeline/java-app && git clone 
 
 echo "**************************"
 echo "*** Building Jar *********"
