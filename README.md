@@ -1,31 +1,41 @@
-# 🚀 Full Stack DevOps Lab – Ansible + AWS + Maven + Frontend + SES
+🚀 Full Stack DevOps Lab – Ansible + AWS + Maven + Frontend + SES
 
-Este repositório apresenta um laboratório prático com foco em automação DevOps e integração completa de tecnologias backend e frontend. O projeto realiza o deploy de uma aplicação full stack, conectada a um banco de dados, provisionada via **Ansible**, hospedada na **AWS**, construída com **Maven**, e com envio de notificações por **Amazon SES**.
+This repo is a hands-on DevOps lab that ties together backend and frontend automation in one place. The goal is to practice full-stack deployment with real tools: infrastructure provisioned by Ansible, app running on AWS, backend built with Maven, frontend in PHP/HTML, database on MySQL, and notifications through Amazon SES.
 
----
+🧰 Stack in Action
 
-## 🧰 Tecnologias Utilizadas
+💻 Ansible – spin up and configure servers automatically
 
-- 💻 **Ansible** – Automação e provisionamento de infraestrutura
-- ☁️ **AWS (EC2, S3, SES)** – Infraestrutura e serviços gerenciados
-- 🐬 **MySQL** – Banco de dados relacional
-- 🌐 **Frontend (HTML + PHP)** – Exibição dos dados do banco
-- ☕ **Java + Maven** – Backend construído com build automatizado
-- 📧 **Amazon SES** – Envio de e-mails de status ou alertas
-- 🐙 **Jenkins (opcional)** – CI/CD integrado
-- 🐳 **Docker + Docker Compose** – Ambientes isolados
-- 🔐 **IAM Roles & Policies** – Segurança na AWS
+☁️ AWS (EC2, S3, SES) – host the app, store data, and send emails
 
----
+🐬 MySQL – database for persistent data
 
-## 🔧 Funcionalidades
+🌐 HTML + PHP – simple frontend showing live DB info
 
-- 🚀 Provisionamento automatizado com Ansible (EC2 + MySQL + app)
-- 🔄 Deploy contínuo com Maven (empacotamento `.jar`)
-- 🌐 Frontend exibe dados dinâmicos do banco
-- 📤 Integração com AWS SES para envio de e-mails:
-  - Status de jobs
-  - Alertas de falhas
-  - Confirmações de operação
-- 💾 Backups automáticos para S3
-- (Opcional) Integração com Jenkins para CI/CD end-to-end
+☕ Java + Maven – backend packaged into a .jar
+
+📧 Amazon SES – email alerts and status updates
+
+🐙 Jenkins (optional) – CI/CD pipelines to tie it all together
+
+🐳 Docker + Docker Compose – local isolated environments
+
+🔐 IAM Roles & Policies – security setup on AWS
+
+🔧 What it Does
+
+🚀 Provision EC2 + MySQL + app stack with Ansible
+
+🔄 Build and deploy backend with Maven
+
+🌐 Frontend pulls dynamic data from MySQL
+
+📤 SES sends emails for:
+
+job success/failure
+
+operation confirmations
+
+💾 Backup jobs save data to S3
+
+(Optional) Jenkins pipeline for full CI/CD flow
