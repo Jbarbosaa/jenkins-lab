@@ -24,8 +24,6 @@ This repo is a hands-on DevOps lab that ties together backend and frontend autom
 
 🔧 What it Does
 
-🚀 Provision EC2 + MySQL + app stack with Ansible
-
 🔄 Build and deploy backend with Maven
 
 🌐 Frontend pulls dynamic data from MySQL
@@ -36,6 +34,6 @@ job success/failure
 
 operation confirmations
 
-💾 Backup jobs save data to S3
+💾 Backup jobs save data to S3 with Ansible 
 
 (Optional) Jenkins pipeline for full CI/CD flow
