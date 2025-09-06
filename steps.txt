@@ -9,3 +9,5 @@ Set up the admin user for access.
 Create an access token/credential in GitHub and add it to Jenkins.
 
 Add the Docker Hub credential to Jenkins as a username/password type.
+
+Configure an on-premise or off-premise environment with RSA key authentication for access from the remote_host machine.
