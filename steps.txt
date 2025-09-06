@@ -1,0 +1,11 @@
+Clone the repository.
+
+Grant permission 1000:1000 to the jenkins_home folder.
+
+Start Docker Compose.
+
+Set up the admin user for access.
+
+Create an access token/credential in GitHub and add it to Jenkins.
+
+Add the Docker Hub credential to Jenkins as a username/password type.
